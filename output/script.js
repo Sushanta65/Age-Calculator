@@ -1,24 +1,7 @@
 "use strict";
 const country = "Bangladesh";
 console.log(country);
-const myfun = (a, b, c) => {
-    if (c == "add") {
-        return a + b;
-    }
-    else if (c == "multiply") {
-        return a * b;
-    }
-    else if (c == "division") {
-        return a / b;
-    }
-    else if (c == "minus") {
-        return a - b;
-    }
-    else {
-        return "You can Add, Minus, Multiply, Divided of these number. Please Enter value add, minus, multiply of division.";
-    }
-};
-const value = myfun(30, 5, "minus");
+// Age Calculator
 const ageCalculation = () => {
     let input1 = document.querySelector("#birthDay");
     let birthDay = parseFloat(input1.value);
@@ -53,7 +36,7 @@ const ageCalculation = () => {
         if (currentMonth < birthMonth) {
             // currentYear - birthYear - 1;
             let month = currentMonth + 12;
-            finalMonth = month - birthMonth; // 5
+            finalMonth = month - birthMonth;
             finalYear = currentYear - birthYear - 1;
         }
         else {
@@ -62,14 +45,14 @@ const ageCalculation = () => {
         if (currentDay < birthDay) {
             //finalMonth - 1;
             finalMonth = finalMonth - 1;
-            let day = currentDay + 30; // 23 + 30 = 53
+            let day = currentDay + 30;
             finalDay = day - birthDay;
         }
         else {
             finalDay = currentDay - birthDay;
         }
     }
-    let showMonth; // `${finalMonth} Months`
+    let showMonth;
     if (finalMonth == 0) {
         showMonth = "";
     }
